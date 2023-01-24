@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.HourCalculator"
+             Title="HourCalculator">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Hour Calculator"
+                FontSize="30"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Margin="20"
+            />
+
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" /> <!-- 0 Headers -->
+                    <RowDefinition Height="Auto" /> <!-- 1 Monday 1 -->
+                    <RowDefinition Height="Auto" /> <!-- 2 Tuesday 1 -->
+                    <RowDefinition Height="Auto" /> <!-- 3 Wednesday 1 -->
+                    <RowDefinition Height="Auto" /> <!-- 4 Thursday 1 -->
+                    <RowDefinition Height="Auto" /> <!-- 5 Friday 1 -->
+                    <RowDefinition Height="Auto" /> <!-- 6 Monday 2 -->
+                    <RowDefinition Height="Auto" /> <!-- 7 Tuesday 2 -->
+                    <RowDefinition Height="Auto" /> <!-- 8 Wednesday 2 -->
+                    <RowDefinition Height="Auto" /> <!-- 9 Thursday 2 -->
+                    <RowDefinition Height="Auto" /> <!-- 10 Friday 2 -->
+                    <RowDefinition Height="Auto" /> <!-- 11 Calculate -->
+                    <RowDefinition Height="Auto" /> <!-- 12 Output -->
+                    <RowDefinition Height="Auto" /> <!-- 13 Output -->
+                </Grid.RowDefinitions>
+
+                <!-- 0 Headers -->
+                <Label
+                    Text="Day"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                />
+                <Label
+                    Text="Start"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                />
+                <Label
+                    Text="End"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                />
+                <Label
+                    Text="Lunch"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                />
+
+                <!-- 1 Monday 1 -->
+                <Label 
+                    Text="Monday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPmondayStart1"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPmondayEnd1"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtMondayLunch1"
+                />
+
+                <!-- 2 Tuesday 1 -->
+                <Label 
+                    Text="Tuesday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPTuesdayStart1"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPTuesdayEnd1"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtTuesdayLunch1"
+                />
+                
+                <!-- 3 Wednesday 1 -->
+                <Label 
+                    Text="Wednesday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPWednesdayStart1"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPWednesdayEnd1"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtWednesdayLunch1"
+                />
+                
+                <!-- 4 Thursday 1 -->
+                <Label 
+                    Text="Thursday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPThursdayStart1"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPThursdayEnd1"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="4"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtThursdayLunch1"
+                />
+                
+                <!-- 5 Friday 1 -->
+                <Label 
+                    Text="Friday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPFridayStart1"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPFridayEnd1"
+                    Time="12:00:00"
+                />
+                <Entry 
+                    Text="0" 
+                    Grid.Row="5"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtFridayLunch1"
+                />
+                
+                <!-- 6 Monday 2 -->
+                <Label 
+                    Text="Monday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPMondayStart2"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPMondayEnd2"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="6"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtMondayLunch2"
+                />
+                
+                <!-- 7 Tuesday 2 -->
+                <Label 
+                    Text="Tuesday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPTuesdayStart2"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPTuesdayEnd2"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="7"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtTuesdayLunch2"
+                />
+                
+                <!-- 8 Wednesday 2 -->
+                <Label 
+                    Text="Wednesday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPWednesdayStart2"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="8"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPWednesdayEnd2"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="8"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtWednesdayLunch2"
+                />
+                
+                <!-- 9 Thursday 2 -->
+                <Label 
+                    Text="Thursday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPThursdayStart2"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPThursdayEnd2"
+                    Time="17:00:00"
+                />
+                <Entry 
+                    Text="60" 
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtThursdayLunch2"
+                />
+                
+                <!-- 10 Friday 2 -->
+                <Label 
+                    Text="Friday" 
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="16"
+                    Margin="1"
+                    Grid.Row="10"
+                    Grid.Column="0"
+                />
+                <TimePicker
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Margin="1"
+                    x:Name="TPFridayStart2"
+                    Time="9:00:00"
+                />
+                <TimePicker 
+                    Grid.Row="10"
+                    Grid.Column="2"
+                    Margin="1"
+                    x:Name="TPFridayEnd2"
+                    Time="12:00:00"
+                />
+                <Entry 
+                    Text="0" 
+                    Grid.Row="10"
+                    Grid.Column="3"
+                    FontSize="16"
+                    x:Name="txtFridayLunch2"
+                />
+                
+                <!-- 11 Calculate -->
+                <Button
+                    Text="Calculate"
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    Grid.Row="11"
+                    Grid.ColumnSpan="4"
+                    Margin="1"
+                    Clicked="CalculateHours"
+                />
+                <!-- 12 Output -->
+                <Label
+                    Text="Hours:"
+                    Grid.Row="12"
+                    Grid.Column="0"
+                    FontSize="24"
+                    Margin="1"
+                />
+                <Label
+                    Text="0"
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    FontSize="24"
+                    Margin="1"
+                    x:Name="txtHoursTotal"
+                />
+                <Label
+                    Text="Minutes:"
+                    Grid.Row="12"
+                    Grid.Column="2"
+                    FontSize="24"
+                    Margin="1"
+                />
+                <Label
+                    Text="0"
+                    Grid.Row="12"
+                    Grid.Column="3"
+                    FontSize="24"
+                    Margin="1"
+                    x:Name="txtMinutesTotal"
+                />
+                
+                <!-- 13 Output -->
+                <Label
+                    Text="Hours:"
+                    Grid.Row="13"
+                    Grid.Column="1"
+                    FontSize="24"
+                    Margin="1"
+                />
+                <Label
+                    Text="0"
+                    Grid.Row="13"
+                    Grid.Column="2"
+                    FontSize="24"
+                    Margin="1"
+                    x:Name="txtHoursDecimalTotal"
+                />
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

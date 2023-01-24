@@ -53,6 +53,9 @@
             <Button Text="Counter" 
                     HorizontalOptions="Center"
                     Clicked="Counter" />
+            <Button Text="Hour Calculator" 
+                    HorizontalOptions="Center"
+                    Clicked="HourCalculator" />
 
         </VerticalStackLayout>
     </ScrollView>

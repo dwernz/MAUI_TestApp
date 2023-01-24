@@ -21,5 +21,10 @@ public partial class MainPage : ContentPage
 	{
 		await Shell.Current.GoToAsync("Counter");
 	}
+
+	private async void HourCalculator(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("HourCalculator");
+	}
 }
 

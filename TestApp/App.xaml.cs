@@ -11,5 +11,6 @@ public partial class App : Application
 		Routing.RegisterRoute("SalesCalculator", typeof(SalesCalculator));
 		Routing.RegisterRoute("TipCalculator", typeof(TipCalculator));
 		Routing.RegisterRoute("Counter", typeof(Counter));
+		Routing.RegisterRoute("HourCalculator", typeof(HourCalculator));
 	}
 }

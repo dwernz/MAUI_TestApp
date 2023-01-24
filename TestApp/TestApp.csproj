@@ -56,6 +56,9 @@
 	  <MauiXaml Update="Counter.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="HourCalculator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="SalesCalculator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
