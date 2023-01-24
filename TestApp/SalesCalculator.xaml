@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.SalesCalculator"
+             Title="SalesCalculator">
+    <VerticalStackLayout>
+        <Label 
+            Text="Sales Calculator"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            FontAttributes="Bold"
+            Margin="20" />
+
+        <Grid HorizontalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <!-- Subtotal -->
+            <Label Text="Subtotal:" 
+                Margin="20" 
+                Grid.Column="0" 
+                Grid.Row="0" />
+            <Entry 
+                x:Name="txtSubtotal"
+                Placeholder="5.00"
+                MinimumWidthRequest="200" 
+                MaximumHeightRequest="24"
+                Grid.Row="0"
+                Grid.Column="1" />
+
+            <!-- Discount Percent -->
+            <Label 
+                Text="Discount Percent: (%)" 
+                Margin="20"
+                Grid.Row="1"
+                Grid.Column="0"/>
+            <Entry 
+                x:Name="txtDiscountPercent"
+                Placeholder="15" 
+                MinimumWidthRequest="200" 
+                MaximumHeightRequest="24"
+                Grid.Row="1"
+                Grid.Column="1" />
+
+            <!-- Discount Amount -->
+            <Label 
+                Text="Discount Amount" 
+                Margin="20"
+                Grid.Column="0"
+                Grid.Row="2" />
+            <Entry 
+                x:Name="txtDiscountAmount"
+                MinimumWidthRequest="200" 
+                MaximumHeightRequest="24"
+                IsReadOnly="True"
+                Grid.Column="1"
+                Grid.Row="2"/>
+
+            <!-- Total -->
+            <Label Text="Total" Margin="20"
+                Grid.Column="0"
+                Grid.Row="3"/>
+            <Entry 
+                x:Name="txtTotal"
+                IsReadOnly="True"
+                MinimumWidthRequest="200" 
+                MaximumHeightRequest="24"
+                Grid.Column="1"
+                Grid.Row="3" />
+
+            <Button Text="Calculate" 
+                Clicked="CalculateDiscount"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2"
+                Grid.Row="4"
+                Margin="20" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

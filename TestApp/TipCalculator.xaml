@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.TipCalculator"
+             Title="TipCalculator">
+    <VerticalStackLayout>
+        <Label 
+            Text="Tip Calculator"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            FontAttributes="Bold"
+            Margin="20"/>
+
+        <Grid HorizontalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Subtotal -->
+            <Label Text="Subtotal"
+                Margin="20" 
+                Grid.Column="0" 
+                Grid.Row="0" />
+            <Entry 
+                x:Name="txtTipSubtotal"
+                Placeholder="5.00"
+                Grid.Row="0"
+                Grid.Column="1" />
+            
+            <!-- Tip Percent -->
+            <Label Text="Tip Percent"
+                Margin="20" 
+                Grid.Column="0" 
+                Grid.Row="1" />
+            <Entry 
+                x:Name="txtTipPercent"
+                Placeholder="5.00"
+                Grid.Row="1"
+                Grid.Column="1" />
+            
+            <!-- Tip Amount -->
+            <Label Text="Tip Amount"
+                Margin="20" 
+                Grid.Column="0" 
+                Grid.Row="2" />
+            <Entry 
+                x:Name="txtTipAmount"
+                Placeholder="5.00"
+                Grid.Row="2"
+                Grid.Column="1" />
+            
+            <!-- Total -->
+            <Label Text="Total"
+                Margin="20" 
+                Grid.Column="0" 
+                Grid.Row="3" />
+            <Entry 
+                x:Name="txtTipTotal"
+                Placeholder="5.00"
+                Grid.Row="3"
+                Grid.Column="1"
+                IsReadOnly="True" />
+
+            <!-- Round up? -->
+            <Label 
+                Text="Round Up to the nearest dollar?"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Margin="20"
+                HorizontalTextAlignment="Center"/>
+
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.ColumnSpan="2">
+                <RadioButton Content="None" GroupName="roundUp" IsChecked="True" x:Name="radioNone"/>
+                <RadioButton Content="Tip" GroupName="roundUp" x:Name="radioTip"/>
+                <RadioButton Content="Total" GroupName="roundUp" x:Name="radioTotal"/>
+            </HorizontalStackLayout>
+            
+            <!-- Calculate Amount Button -->
+            <!-- Calculate Tip Button -->
+            <Button Text="Calc Percent"
+                Grid.Row="6"
+                Grid.Column="0"
+                Margin="20"
+                Clicked="CalculatePercent"/>
+            <Button Text="Calc Amount" 
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="20"
+                Clicked="CalculateAmount"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

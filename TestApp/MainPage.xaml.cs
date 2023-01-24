@@ -1,0 +1,25 @@
+﻿namespace TestApp;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+		InitializeComponent();
+	}
+
+	private async void SalesCalculator(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("SalesCalculator");
+	}
+
+	private async void TipCalculator(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("TipCalculator");
+	}
+
+	private async void Counter(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("Counter");
+	}
+}
+
