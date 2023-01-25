@@ -38,6 +38,7 @@
                 Counter
                 Tip Calculator
                 Fizz Buzz Generator
+                Math Quiz
             -->
             <!-- TODO -->
             <!-- 
@@ -48,29 +49,37 @@
                 Shopping list
                     1) Saves the list to a database, able to add, edit, or delete items.
                     2) item, qty.
-                Math Quiz
-                    1) Picks two random numbers and a random math operation.
-                    2) Accepts input from user to answer the math question.
-                    3) Keeps score.
+                Barcode Generator
+                    1) scroll through different types of barcodes
+                    2) edit the digits of the barcode to display the corresponding barcode
             -->
             <Button Text="Sales Calculator" 
                     HorizontalOptions="Center"
-                    Clicked="SalesCalculator" />
+                    Clicked="SalesCalculator"
+                    Margin="10"/>
             <Button Text="Tip Calculator" 
                     HorizontalOptions="Center"
                     Clicked="TipCalculator" />
             <Button Text="Counter" 
                     HorizontalOptions="Center"
-                    Clicked="Counter" />
+                    Clicked="Counter"
+                    Margin="10"/>
             <Button Text="Hour Calculator" 
                     HorizontalOptions="Center"
-                    Clicked="HourCalculator" />
+                    Clicked="HourCalculator"
+                    Margin="10"/>
             <Button Text="Fizz Buzz Number Generator" 
                     HorizontalOptions="Center"
-                    Clicked="FizzBuzzNumberGenerator" />
+                    Clicked="FizzBuzzNumberGenerator"
+                    Margin="10"/>
             <Button Text="Math Quiz" 
                     HorizontalOptions="Center"
-                    Clicked="MathQuiz" />
+                    Clicked="MathQuiz"
+                    Margin="10"/>
+            <Button Text="Tic Tac Toe" 
+                    HorizontalOptions="Center"
+                    Clicked="TicTacToe"
+                    Margin="10"/>
 
         </VerticalStackLayout>
     </ScrollView>

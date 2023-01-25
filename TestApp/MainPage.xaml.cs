@@ -35,5 +35,10 @@ public partial class MainPage : ContentPage
 	{
         await Shell.Current.GoToAsync("MathQuiz");
     }
+
+	private async void TicTacToe(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("TicTacToe");
+	}
 }
 

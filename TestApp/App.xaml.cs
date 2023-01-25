@@ -14,5 +14,6 @@ public partial class App : Application
 		Routing.RegisterRoute("HourCalculator", typeof(HourCalculator));
 		Routing.RegisterRoute("FizzBuzzNumberGenerator", typeof(FizzBuzzNumberGenerator));
         Routing.RegisterRoute("MathQuiz", typeof(MathQuiz));
+        Routing.RegisterRoute("TicTacToe", typeof(TicTacToe));
     }
 }

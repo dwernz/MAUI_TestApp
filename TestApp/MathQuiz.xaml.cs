@@ -36,7 +36,14 @@ public partial class MathQuiz : ContentPage
 
     private void SubmitAnswer(object sender, EventArgs e)
     {
+        if (txtGuess.Text == null)
+        {
+            DisplayAlert("No Number", "Your guess can't be blank.", "Ok");
+            return;
+        }
+
         int guess = Convert.ToInt32(txtGuess.Text);
+
         int answer = 0;
 
         if (stringOperator == "/")

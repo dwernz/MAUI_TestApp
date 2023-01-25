@@ -105,6 +105,9 @@
 		<MauiXaml Update="SalesCalculator.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="TicTacToe.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="TipCalculator.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
