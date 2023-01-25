@@ -99,6 +99,9 @@
 		<MauiXaml Update="HourCalculator.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="MathQuiz.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="SalesCalculator.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

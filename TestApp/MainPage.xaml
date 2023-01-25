@@ -37,6 +37,7 @@
                 Sales Calculator
                 Counter
                 Tip Calculator
+                Fizz Buzz Generator
             -->
             <!-- TODO -->
             <!-- 
@@ -51,8 +52,6 @@
                     1) Picks two random numbers and a random math operation.
                     2) Accepts input from user to answer the math question.
                     3) Keeps score.
-                Fizz Buzz Generator
-                    1) Accepts a max number, and generates the fizz buzz algorithm.
             -->
             <Button Text="Sales Calculator" 
                     HorizontalOptions="Center"
@@ -69,6 +68,9 @@
             <Button Text="Fizz Buzz Number Generator" 
                     HorizontalOptions="Center"
                     Clicked="FizzBuzzNumberGenerator" />
+            <Button Text="Math Quiz" 
+                    HorizontalOptions="Center"
+                    Clicked="MathQuiz" />
 
         </VerticalStackLayout>
     </ScrollView>

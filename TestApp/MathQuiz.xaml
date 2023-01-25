@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.MathQuiz"
+             Title="MathQuiz">
+    <VerticalStackLayout>
+        <Label 
+            Text="Math Quiz" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="20"
+            HorizontalTextAlignment="Center"
+            x:Name="txtHeader"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label 
+                Text="" 
+                x:Name="txtNum1"
+                FontSize="36"
+                Margin="12"
+                IsVisible="False"
+                />
+            <Label 
+                Text="" 
+                x:Name="txtOperator"
+                FontSize="36"
+                Margin="12"
+                IsVisible="False"
+                />
+            <Label 
+                Text="" 
+                x:Name="txtNum2"
+                FontSize="36"
+                Margin="12"
+                IsVisible="False"
+                />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+        >
+            <Label 
+                Text="Guess: "
+                Margin="10"
+                FontSize="24"
+                IsVisible="False"
+                x:Name="lblGuess"
+            />
+            <Entry 
+                x:Name="txtGuess"
+                Margin="10"
+                FontSize="22"
+                IsVisible="False"
+                Keyboard="Numeric"
+            />
+        </HorizontalStackLayout>
+        <Button 
+            Text="Start" 
+            x:Name="btnStart"
+            HorizontalOptions="Center"
+            Clicked="StartQuiz"
+            FontSize="24"
+            />
+        <Button 
+            Text="Submit" 
+            x:Name="btnSubmit" 
+            IsVisible="False"
+            HorizontalOptions="Center"
+            Clicked="SubmitAnswer"
+            FontSize="24"
+            />
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+        >
+            <Label
+                Text="Questions completed: 0"
+                x:Name="lblQuestion"
+                IsVisible="False"
+                Margin="10"
+            />
+            <Label
+                Text="Correct: 0"
+                x:Name="lblCorrect"
+                IsVisible="False"
+                Margin="10"
+            />
+            <Label
+                Text="Score: 0%"
+                x:Name="lblScore"
+                IsVisible="False"
+                Margin="10"
+            />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
