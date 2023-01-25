@@ -13,7 +13,7 @@
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                HeightRequest="150"
                 HorizontalOptions="Center" />
 
             <Label
@@ -31,11 +31,15 @@
                 HorizontalTextAlignment="Center"/>
 
             <!-- Different mini applications I have created. -->
+            <!-- Completed -->
+            <!--
+                Hour Calculator
+                Sales Calculator
+                Counter
+                Tip Calculator
+            -->
             <!-- TODO -->
             <!-- 
-                Hours calculator
-                    1) Calculate the number of hours worked in a day, week, or two week period.
-                    2) Add lunch deduction
                 Measurement Conversion
                     1) Conversions for volume, weight, length
                 Simple game?
@@ -43,6 +47,12 @@
                 Shopping list
                     1) Saves the list to a database, able to add, edit, or delete items.
                     2) item, qty.
+                Math Quiz
+                    1) Picks two random numbers and a random math operation.
+                    2) Accepts input from user to answer the math question.
+                    3) Keeps score.
+                Fizz Buzz Generator
+                    1) Accepts a max number, and generates the fizz buzz algorithm.
             -->
             <Button Text="Sales Calculator" 
                     HorizontalOptions="Center"
@@ -56,6 +66,9 @@
             <Button Text="Hour Calculator" 
                     HorizontalOptions="Center"
                     Clicked="HourCalculator" />
+            <Button Text="Fizz Buzz Number Generator" 
+                    HorizontalOptions="Center"
+                    Clicked="FizzBuzzNumberGenerator" />
 
         </VerticalStackLayout>
     </ScrollView>

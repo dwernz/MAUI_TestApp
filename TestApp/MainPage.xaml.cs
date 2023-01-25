@@ -26,5 +26,10 @@ public partial class MainPage : ContentPage
 	{
 		await Shell.Current.GoToAsync("HourCalculator");
 	}
+
+	private async void FizzBuzzNumberGenerator(object sender, EventArgs e)
+	{
+        await Shell.Current.GoToAsync("FizzBuzzNumberGenerator");
+    }
 }
 
