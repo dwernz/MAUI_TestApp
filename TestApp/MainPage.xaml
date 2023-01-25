@@ -52,6 +52,8 @@
                 Barcode Generator
                     1) scroll through different types of barcodes
                     2) edit the digits of the barcode to display the corresponding barcode
+                Fix Math Quiz Error
+                    1) If there is an empty value in the entry box, it will crash the app
             -->
             <Button Text="Sales Calculator" 
                     HorizontalOptions="Center"

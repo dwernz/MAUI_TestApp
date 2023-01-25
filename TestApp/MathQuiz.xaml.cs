@@ -36,7 +36,7 @@ public partial class MathQuiz : ContentPage
 
     private void SubmitAnswer(object sender, EventArgs e)
     {
-        if (txtGuess.Text == null)
+        if (txtGuess.Text == "")
         {
             DisplayAlert("No Number", "Your guess can't be blank.", "Ok");
             return;
