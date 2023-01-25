@@ -5,10 +5,15 @@
              Title="FizzBuzzNumberGenerator">
     <VerticalStackLayout MinimumHeightRequest="500">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            HorizontalOptions="Center" />
+            Text="Fizz Buzz Number Generator"
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="20"
+            HorizontalTextAlignment="Center"/>
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Label Text="Max Number: " HorizontalTextAlignment="Center" Margin="10"/>
+            <Label Text="Max Number: " HorizontalTextAlignment="Center" Margin="10"
+                   FontSize="24"
+                   FontAttributes="Bold"/>
             <Entry 
                 Placeholder="100" 
                 x:Name="txtMaxNumber" 
@@ -17,7 +22,7 @@
                 />
         </HorizontalStackLayout>
 
-        <Button Text="CalculateFizzBuzz" HorizontalOptions="Center" Clicked="GenerateFizzBuzz"/>
+        <Button Text="Calculate Fizz Buzz" HorizontalOptions="Center" Clicked="GenerateFizzBuzz"/>
 
 
         <ScrollView>
@@ -27,8 +32,6 @@
                 IsEnabled="True"
                 HeightRequest="300"
                 HorizontalOptions="Center"
-                BackgroundColor="AntiqueWhite"
-                MaximumWidthRequest="400"
                 Margin="20"
             >
                 <ListView.ItemTemplate>
