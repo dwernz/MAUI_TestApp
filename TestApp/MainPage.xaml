@@ -37,7 +37,13 @@
                 HorizontalTextAlignment="Center"
                 Loaded="NationalDayMessageGenerator"/>
 
-            <!-- Different mini applications I have created. -->
+            <Button
+                Text="Visit my website"
+                HorizontalOptions="Center"
+                Clicked="GoToWebsite"
+            />
+
+            <!-- Different mini applications/features I have created. -->
             <!-- Completed -->
             <!--
                 Hour Calculator
@@ -47,6 +53,7 @@
                 Fizz Buzz Generator
                 Math Quiz
                 TicTacToe
+                National Day message on Home page
             -->
             <!-- TODO -->
             <!-- Add Features
@@ -59,38 +66,115 @@
                     1) scroll through different types of barcodes
                     2) edit the digits of the barcode to display the corresponding barcode
                 Pomodoro Timer
+                    1) Accepts user input for a session time and break time
+                    2) Starting from session, counts down until 0 seconds left
+                    3) Plays alarm sound
+                    4) Switches to break time and counts down until 0 seconds left
+                    5) Plays alarm sound
+                    6) Switches back to session time and counts down, and repeats until stopped.
+                    7) Start/Stop button do not reset the times.
+                    8) Input boxes can be disabled while timer is running to avoid changing amounts
+                    9) Reset button to reset times
+                Running Total
+                    1) Input item and item price
+                    2) Stores items and their prices, with a running total at the bottom
+                    3) Has a sales tax input to add to subtotal for the total price
+                    4) Add, edit, and delete items as needed
             -->
             <!-- Fix Features
                 
             -->
-            <Button Text="Sales Calculator" 
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- 0 -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- 1 -->
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- 0 -->
+                    <RowDefinition Height="Auto" />
+                    <!-- 1 -->
+                    <RowDefinition Height="Auto" />
+                    <!-- 2 -->
+                    <RowDefinition Height="Auto" />
+                    <!-- 3 -->
+                </Grid.RowDefinitions>
+
+                <!-- 0 -->
+                <Button 
+                    Text="Sales Calculator" 
                     HorizontalOptions="Center"
                     Clicked="SalesCalculator"
-                    Margin="10"/>
-            <Button Text="Tip Calculator" 
+                    Margin="10"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                />
+                <Button 
+                    Text="Tip Calculator" 
                     HorizontalOptions="Center"
-                    Clicked="TipCalculator" />
-            <Button Text="Counter" 
+                    Clicked="TipCalculator" 
+                    Margin="10"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                />
+
+                <!-- 1 -->
+                <Button 
+                    Text="Counter" 
                     HorizontalOptions="Center"
                     Clicked="Counter"
-                    Margin="10"/>
-            <Button Text="Hour Calculator" 
+                    Margin="10"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                />
+                <Button 
+                    Text="Hour Calculator" 
                     HorizontalOptions="Center"
                     Clicked="HourCalculator"
-                    Margin="10"/>
-            <Button Text="Fizz Buzz Number Generator" 
+                    Margin="10"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                />
+
+                <!-- 2 -->
+                <Button 
+                    Text="Fizz Buzz Number Generator" 
                     HorizontalOptions="Center"
                     Clicked="FizzBuzzNumberGenerator"
-                    Margin="10"/>
-            <Button Text="Math Quiz" 
+                    Margin="10"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                />
+                <Button 
+                    Text="Math Quiz" 
                     HorizontalOptions="Center"
                     Clicked="MathQuiz"
-                    Margin="10"/>
-            <Button Text="Tic Tac Toe" 
+                    Margin="10"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                />
+
+                <!-- 3 -->
+                <Button 
+                    Text="Tic Tac Toe" 
                     HorizontalOptions="Center"
                     Clicked="TicTacToe"
-                    Margin="10"/>
-
+                    Margin="10"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                />
+                <Button 
+                    Text="Shopping Total" 
+                    HorizontalOptions="Center"
+                    Clicked="ShoppingTotal"
+                    Margin="10"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                />
+        
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 

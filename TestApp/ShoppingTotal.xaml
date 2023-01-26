@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.ShoppingTotal"
+             Title="ShoppingTotal">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Shopping Total"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="20"
+            FontSize="30"
+            HorizontalTextAlignment="Center"/>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Label Text="Item Name: "
+                   FontSize="24"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="txtItemName"
+                   Margin="10"
+                   MinimumWidthRequest="200"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Label Text="Item Price: " 
+                   FontSize="24"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="txtItemPrice"
+                   Margin="10"
+                   MinimumWidthRequest="200"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Margin="20">
+            <Button Text="Add Item" Clicked="AddItem" Margin="1"/>
+            <Button Text="Clear" Clicked="ClearItems" Margin="1"/>
+        </HorizontalStackLayout>
+        
+        <ListView
+            HorizontalOptions="Center"
+            ItemsSource="{Binding items}"
+            MaximumHeightRequest="200"
+            x:Name="itemListBox">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            HorizontalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Grid.Column="0" Text="{Binding Name}" Margin="1" MaximumWidthRequest="100"/>
+                            <Label Grid.Column="1" Text="{Binding Price, StringFormat='{0:0.00}'}" Margin="1" MaximumWidthRequest="100"/>
+                            <Button Grid.Column="2" Text="Edit Name" Command="{Binding EditItem}" MaximumWidthRequest="150" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemName"/>
+                            <Button Grid.Column="3" Text="Edit Price" Command="{Binding EditItem}" MaximumWidthRequest="100" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemPrice"/>
+                            <Button Grid.Column="4" Text="Delete" Command="{Binding DeleteCommand}" MaximumWidthRequest="100" CommandParameter="{Binding}" Margin="1" Clicked="DeleteItem"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Margin="20">
+            <Label Text="Tax: "
+                   Margin="20"
+                   FontSize="24"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="txtTaxPercent" Text="6.5"/>
+            <Label Text="%"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="20"/>
+        </HorizontalStackLayout>
+
+        <Grid
+            HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <!-- 0 Subtotal -->
+                <RowDefinition Height="Auto" />
+                <!-- 1 Tax -->
+                <RowDefinition Height="Auto" />
+                <!-- 2 Total -->
+            </Grid.RowDefinitions>
+
+            <!-- Subtotal -->
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalTextAlignment="End"
+                Text="Subtotal: $"
+                FontSize="24"
+                FontAttributes="Bold"/>
+            <Label 
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalTextAlignment="Start"
+                Text="0.00"
+                x:Name="lblSubtotal"
+                FontSize="24"/>
+
+            <!-- Tax -->
+            <Label 
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalTextAlignment="End"
+                Text="Tax: $"
+                FontSize="24"
+                FontAttributes="Bold"/>
+            <Label 
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalTextAlignment="Start"
+                Text="0.00"
+                x:Name="lblTaxDollar"
+                FontSize="24"/>
+
+            <!-- Total -->
+            <Label 
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalTextAlignment="End"
+                Text="Total: $"
+                FontAttributes="Bold"
+                FontSize="24"/>
+            <Label 
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalTextAlignment="Start"
+                Text="0.00"
+                x:Name="lblTotal"
+                FontSize="24"/>
+
+        </Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

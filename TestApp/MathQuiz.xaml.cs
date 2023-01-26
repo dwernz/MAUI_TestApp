@@ -36,46 +36,54 @@ public partial class MathQuiz : ContentPage
 
     private void SubmitAnswer(object sender, EventArgs e)
     {
-        if (txtGuess.Text == "")
+        try
         {
-            DisplayAlert("No Number", "Your guess can't be blank.", "Ok");
-            return;
-        }
+            if (txtGuess.Text == "")
+            {
+                DisplayAlert("No Number", "Your guess can't be blank.", "Ok");
+                return;
+            }
 
-        int guess = Convert.ToInt32(txtGuess.Text);
+            int guess = Convert.ToInt32(txtGuess.Text);
 
-        int answer = 0;
+            int answer = 0;
 
-        if (stringOperator == "/")
-        {
-            answer = rndNum1 / rndNum2;
-        }
-        else if (stringOperator == "*")
-        {
-            answer = rndNum1 * rndNum2;
-        }
-        else if (stringOperator == "+")
-        {
-            answer = rndNum1 + rndNum2;
-        }
-        else if (stringOperator == "-")
-        {
+            if (stringOperator == "/")
+            {
+                answer = rndNum1 / rndNum2;
+            }
+            else if (stringOperator == "*")
+            {
+                answer = rndNum1 * rndNum2;
+            }
+            else if (stringOperator == "+")
+            {
+                answer = rndNum1 + rndNum2;
+            }
+            else if (stringOperator == "-")
+            {
 
-            answer = rndNum1 - rndNum2;
-        }
+                answer = rndNum1 - rndNum2;
+            }
 
-        if (answer == guess)
-        {
-            correct++;
-            txtHeader.Text = $"Correct: {rndNum1} {stringOperator} {rndNum2} = {answer}";
-        }
-        else
-        {
-            txtHeader.Text = $"Incorrect: {rndNum1} {stringOperator} {rndNum2} = {answer}";
-        }
+            if (answer == guess)
+            {
+                correct++;
+                txtHeader.Text = $"Correct: {rndNum1} {stringOperator} {rndNum2} = {answer}";
+            }
+            else
+            {
+                txtHeader.Text = $"Incorrect: {rndNum1} {stringOperator} {rndNum2} = {answer}";
+            }
 
+
+            generateQuestion();
+        }
+        catch (FormatException)
+        {
+            DisplayAlert("Error", "Please enter a valid integer", "Ok");
+        }
         
-        generateQuestion();
 	}
 
 	private void generateQuestion()

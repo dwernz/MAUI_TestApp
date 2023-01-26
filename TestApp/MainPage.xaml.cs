@@ -1,8 +1,11 @@
-﻿namespace TestApp;
+﻿using System.Windows.Input;
+
+namespace TestApp;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+    
+    public MainPage()
 	{
 		InitializeComponent();
 	}
@@ -40,6 +43,17 @@ public partial class MainPage : ContentPage
 	{
 		await Shell.Current.GoToAsync("TicTacToe");
 	}
+
+	private async void ShoppingTotal(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("ShoppingTotal");
+	}
+
+	private async void GoToWebsite(object sender, EventArgs e)
+	{
+        var url = "https://dwernzcv.azurewebsites.net";
+		await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+    }
 
 	private void NationalDayMessageGenerator (object sender, EventArgs e)
 	{
