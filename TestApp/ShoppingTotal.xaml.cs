@@ -19,14 +19,14 @@ public partial class ShoppingTotal : ContentPage
 
     private void AddItem(object sender, EventArgs e)
     {
-        if (txtItemName.Text == null)
+        if (txtItemName.Text == null || txtItemName.Text == "")
         {
             DisplayAlert("Item Name Empty", "Item Name field cannot be empty", "Ok");
             txtItemName.Focus();
             return;
         }
 
-        if (txtItemPrice.Text == null)
+        if (txtItemPrice.Text == null || txtItemPrice.Text == "")
         {
             DisplayAlert("Item Price Empty", "Item Price field cannot be empty", "Ok");
             txtItemPrice.Focus();
