@@ -25,10 +25,17 @@
             <Label
                 Text="Welcome to Daniel's Testing .NET Multi-platform App UI."
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"/>
+
+            <Label
+                x:Name="lblNationalDay"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Loaded="NationalDayMessageGenerator"/>
 
             <!-- Different mini applications I have created. -->
             <!-- Completed -->
@@ -39,21 +46,22 @@
                 Tip Calculator
                 Fizz Buzz Generator
                 Math Quiz
+                TicTacToe
             -->
             <!-- TODO -->
-            <!-- 
+            <!-- Add Features
                 Measurement Conversion
                     1) Conversions for volume, weight, length
-                Simple game?
-                    1) Tic-Tac-Toe
                 Shopping list
                     1) Saves the list to a database, able to add, edit, or delete items.
                     2) item, qty.
                 Barcode Generator
                     1) scroll through different types of barcodes
                     2) edit the digits of the barcode to display the corresponding barcode
-                Fix Math Quiz Error
-                    1) If there is an empty value in the entry box, it will crash the app
+                Pomodoro Timer
+            -->
+            <!-- Fix Features
+                
             -->
             <Button Text="Sales Calculator" 
                     HorizontalOptions="Center"

@@ -40,5 +40,23 @@ public partial class MainPage : ContentPage
 	{
 		await Shell.Current.GoToAsync("TicTacToe");
 	}
+
+	private void NationalDayMessageGenerator (object sender, EventArgs e)
+	{
+		DateTime today = DateTime.Today;
+        NationalDay nationalDay = new NationalDay();
+
+        int month = today.Month;
+		int day = today.Day;
+		int year = today.Year;
+		DayOfWeek dayOfWeek = today.DayOfWeek;
+
+		string monthString = nationalDay.GetMonthString(month);
+		string dayEnding = nationalDay.GetDayEnding(day);
+
+		string message = nationalDay.NationalDayMessage(month, day);
+		lblNationalDay.Text = $"Today is {dayOfWeek}, {monthString} {day}{dayEnding}, {year}." + Environment.NewLine +
+			$"It's {message} Day!";
+	}
 }
 
