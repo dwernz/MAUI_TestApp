@@ -13,14 +13,18 @@
                Margin="35"
                x:Name="LblCountApp"
                HorizontalTextAlignment="Center"/>
+        
         <Grid HorizontalOptions="CenterAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <!-- 1 -->
                 <RowDefinition Height="Auto" />
+                <!-- 5 -->
                 <RowDefinition Height="Auto" />
+                <!-- 10 -->
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 

@@ -54,6 +54,7 @@
                 Math Quiz
                 TicTacToe
                 National Day message on Home page
+            Shopping Total
             -->
             <!-- TODO -->
             <!-- Add Features
@@ -75,24 +76,29 @@
                     7) Start/Stop button do not reset the times.
                     8) Input boxes can be disabled while timer is running to avoid changing amounts
                     9) Reset button to reset times
-                Running Total
-                    1) Input item and item price
-                    2) Stores items and their prices, with a running total at the bottom
-                    3) Has a sales tax input to add to subtotal for the total price
-                    4) Add, edit, and delete items as needed
+                More Complex Game
+                    1) Similar to the C# tutorial TextRPG
+                Coin and Dice Toss
+                    1) Can select a coin, or (4, 6, 10, 12, 20, 100) sided die.
             -->
             <!-- Fix Features
                 
             -->
+            
+            <!-- 
+                After developing more applications, a 
+                single column was becoming too long, so
+                I remodeled the layout to be a two column 
+                layout. 
+            -->
             <Grid HorizontalOptions="CenterAndExpand">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
                     <!-- 0 -->
                     <ColumnDefinition Width="Auto" />
                     <!-- 1 -->
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
                     <!-- 0 -->
                     <RowDefinition Height="Auto" />
                     <!-- 1 -->
@@ -100,6 +106,9 @@
                     <!-- 2 -->
                     <RowDefinition Height="Auto" />
                     <!-- 3 -->
+                    <RowDefinition Height="Auto" />
+                    <!-- 4 -->
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!-- 0 -->
@@ -173,6 +182,8 @@
                     Grid.Row="3"
                     Grid.Column="1"
                 />
+                
+                <!-- 4 -->
         
             </Grid>
         </VerticalStackLayout>

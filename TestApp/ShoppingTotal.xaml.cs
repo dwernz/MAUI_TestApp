@@ -6,6 +6,7 @@ namespace TestApp;
 
 public partial class ShoppingTotal : ContentPage
 {
+    // Create the list of items.
     public ObservableCollection<Item> items { get; set; } = new ObservableCollection<Item>();
     double subtotal = 0.00;
 
@@ -19,6 +20,7 @@ public partial class ShoppingTotal : ContentPage
 
     private void AddItem(object sender, EventArgs e)
     {
+        // Make sure entry fields are not null or empty.
         if (txtItemName.Text == null || txtItemName.Text == "")
         {
             DisplayAlert("Item Name Empty", "Item Name field cannot be empty", "Ok");
@@ -54,6 +56,7 @@ public partial class ShoppingTotal : ContentPage
         }
         catch (FormatException)
         {
+            // This catch makes sure the input is a number.
             DisplayAlert("Error", "Please enter a valid number for item price", "Ok");
         }        
     }

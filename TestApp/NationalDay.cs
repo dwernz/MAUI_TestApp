@@ -10,6 +10,7 @@ namespace TestApp
     {
         public string NationalDayMessage(int month, int day)
         {
+            // Gets a different message each day
             if (month == 1)
             {
                 if (day == 1) { return "National Bloody Mary"; }
@@ -277,7 +278,7 @@ namespace TestApp
                 else if (day == 29) { return "National Lemon Juice"; }
                 else if (day == 30) { return "International Whale Shark"; }
                 else if (day == 31) { return "National Trail Mix"; }
-            }
+            } // Aug
             else if (month == 9) // Sep
             {
                 if (day == 1) { return "National Burnt Ends"; }
@@ -310,7 +311,7 @@ namespace TestApp
                 else if (day == 28) { return "National Strawberry Cream Pie"; }
                 else if (day == 29) { return "National Coffee"; }
                 else if (day == 30) { return "National Hot Mulled Cider"; }
-            }
+            } // Sep
             else if (month == 10) // Oct
             {
                 if (day == 1) { return "National Pumpkin Spice"; }
@@ -344,7 +345,7 @@ namespace TestApp
                 else if (day == 29) { return "National Oatmeal"; }
                 else if (day == 30) { return "National Candy Corn"; }
                 else if (day == 31) { return "National Caramel Apple"; }
-            }
+            } // Oct
             else if (month == 11) // Nov
             {
                 if (day == 1) { return "National Cinnamon"; }
@@ -377,7 +378,7 @@ namespace TestApp
                 else if (day == 28) { return "National French Toast"; }
                 else if (day == 29) { return "Electronic Greetings"; }
                 else if (day == 30) { return "Computer Security"; }
-            }
+            } // Nov
             else if (month == 12) // Dec
             {
                 if (day == 1) { return "National Pie"; }
@@ -411,7 +412,7 @@ namespace TestApp
                 else if (day == 29) { return "National Pepper Pot"; }
                 else if (day == 30) { return "National Bicarbonate of Soda"; }
                 else if (day == 31) { return "National Champagne"; }
-            }
+            } // Dec
 
             return "Not yet implemented";
         }
