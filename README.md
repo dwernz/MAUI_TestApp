@@ -8,6 +8,7 @@ Currently, none of the features save any data.
 Exiting or going back a page will erase any session data.
 Such as the math quiz's scoring system.
 
+## Current applications
 Sales calculator
 Tip calculator
 Hours calculator
@@ -20,19 +21,26 @@ Shopping Total
 There is also the National Day message on the homepage.
 This feature, based on the day of the year, will display a different message.
 
+## Explaination of applications
+
+### Sales Calculator
 The sales calculator has a user enter an item's price and the discount percentage.
 The output will calculate the discount amount and the discounted price.
 
+## Tip Calculator
 The tip calculator lets a user enter the subtotal and the desired tip percentage or tip amount, and calculate the other and the total.
 Users also have the option of rounding the tip or total up to the nearest dollar.
 
+### Hours Calculator
 The hours calculator adds the hours selected in a 2 week work week (Mon-Fri).
 Lunch time is deducted from the hours worked.
 The default hours are set to my wife's normal work week.
 
+### Counter
 The counter app is an extension of MAUI's default programming.
 It expands it by adding the decrement ability as well as incrementing or decrementimg in 5s and 10s for quicker counting.
 
+### Math Quiz
 Math quiz is a simple app that generates too random integers and a random operation.
 The operations are limited to addition, subtraction, multiplication, and division.
 Adding and subtracting the maximum integer is 100.
@@ -42,9 +50,11 @@ Division the integers are selected so that the answer will always be an integer.
    This avoids havind irrational answers.
 The app keeps track of how many questions have been answered, answers correct, and shows the percentage of answers correct.
 
+### Fizz Buzz Generator
 The fizz buzz generator accepts a max number and generates a list of numbers from 1 to the max number.
 Numbers are replaced with fizz, buzz, and fizzbuzz accordingly.
 
+### Tic Tac Toe
 TicTacToe is a 2 player game set with the same rules.
 I originally made TicTacToe apps with Java and JavaScript.
 It's a relatively simple game to program and easy to play while waiting.
@@ -56,6 +66,7 @@ With the computerxs difficulty of being easy or hard
 The easy mode will just randomly select an available spot.
 The hard will select the best move. This is a possible first AL and ML project for me.
 
+### Shopping Total
 Shopping Total is an app my sister asked for.
 Users can input an item name and price, hit the add button.
 This will store the information to the list.
@@ -72,7 +83,7 @@ This erases the list since it is not saved.
 There is plans on making it so the list items are saved to a local file.
 This feature will carry to a shopping list application where users can add item names and qty to a list.
 
-Current possible applications
+## Current possible applications
 Shopping list
 Pomodoro timer
 Random dice roller
