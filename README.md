@@ -51,6 +51,10 @@ It's a relatively simple game to program and easy to play while waiting.
 I used ChatGPT to write most of the code for this.
 There were some issues, so I have to resolve them myself.
 Overall I would say about 70% is ChatGPT and 30% me.
+I want to add the ability to select 1 or 2 player.
+With the computerxs difficulty of being easy or hard
+The easy mode will just randomly select an available spot.
+The hard will select the best move. This is a possible first AL and ML project for me.
 
 Shopping Total is an app my sister asked for.
 Users can input an item name and price, hit the add button.
