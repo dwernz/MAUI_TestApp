@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.Contact"
+             Title="Contact">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Contact"
+            HorizontalOptions="Center"
+            Margin="20"
+            FontSize="30"/>
+
+            <Label 
+                FontSize="20" HorizontalOptions="Center"  Text="E-mail: dwernz@att.net" Margin="10" />
+
+            <Button 
+                Margin="10"
+                HorizontalOptions="Center"
+                Text="Send Email" 
+                Clicked="OnSendEmailButtonClicked" />
+
+            <Button
+                Text="Visit my website"
+                HorizontalOptions="Center"
+                Clicked="GoToWebsite"
+                Margin="10"
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

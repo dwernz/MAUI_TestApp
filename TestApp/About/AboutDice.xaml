@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.About.AboutDice"
+             Title="AboutDice">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="About Dice"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="20"/>
+            <Label
+            FontSize="16"
+            Margin="50"
+            Loaded="AboutDiceInformation"
+            x:Name="lblABoutDice"/>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

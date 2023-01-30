@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.Applications.Dice"
+             Title="Dice">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Help">
+            <MenuFlyoutItem Text="About Dice" Clicked="AboutDice" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Dice Roll!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="20"/>
+
+        <Picker Title="Number of Sides" x:Name="pickNumberOfSides" HorizontalOptions="Center"
+                FontSize="24"
+                Margin="10"
+                HorizontalTextAlignment="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>2</x:Int32>
+                    <x:Int32>4</x:Int32>
+                    <x:Int32>6</x:Int32>
+                    <x:Int32>8</x:Int32>
+                    <x:Int32>10</x:Int32>
+                    <x:Int32>12</x:Int32>
+                    <x:Int32>20</x:Int32>
+                    <x:Int32>100</x:Int32>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Button Text="Roll Dice" HorizontalOptions="Center" Clicked="RollDice"
+                Margin="10"/>
+        
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+            <Label Text="Result:" 
+                   FontSize="40"
+                   Margin="5"/>
+            <Label Text="" x:Name="lblRollResult"
+                   FontSize="40"
+                   Margin="5"/>
+        </HorizontalStackLayout>
+
+        <Grid 
+            HorizontalOptions="Center"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Num of Sides" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="5" HorizontalTextAlignment="Center"/>
+            <Label Text="Roll Result" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="5" HorizontalTextAlignment="Center"/>
+        </Grid>
+
+        <ListView
+            HorizontalOptions="Center"
+            ItemsSource="{Binding previousNumbers}"
+            MaximumHeightRequest="400"
+            x:Name="numberListBox"
+            >
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Grid
+                            HorizontalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding NumOfSides}" Margin="1" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontSize="20"/>
+                            <Label Text="{Binding RollResult}" Margin="1" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontSize="20"/>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
