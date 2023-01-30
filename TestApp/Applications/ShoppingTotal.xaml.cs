@@ -13,10 +13,10 @@ public partial class ShoppingTotal : ContentPage
     public ICommand DeleteCommand { get; set; }
 
     public ShoppingTotal()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         BindingContext = this;
-	}
+    }
 
     private void AddItem(object sender, EventArgs e)
     {
@@ -58,7 +58,7 @@ public partial class ShoppingTotal : ContentPage
         {
             // This catch makes sure the input is a number.
             DisplayAlert("Error", "Please enter a valid number for item price", "Ok");
-        }        
+        }
     }
 
     private void EditItemName(object sender, EventArgs e)
@@ -92,7 +92,7 @@ public partial class ShoppingTotal : ContentPage
         {
             double price = double.Parse(txtItemPrice.Text);
 
-            
+
             subtotal -= item.Price;
             subtotal += price;
 
@@ -113,7 +113,7 @@ public partial class ShoppingTotal : ContentPage
     {
         var item = (Item)((Button)sender).CommandParameter;
         var confirm = await DisplayAlert("Delete Item", "Are you sure you want to delete this item?", "Yes", "No");
-        
+
         if (confirm)
         {
             items.Remove(item);
@@ -153,11 +153,11 @@ public partial class ShoppingTotal : ContentPage
             txtTaxPercent.Text = "6.5";
             UpdateTotals();
         }
-        
+
 
     }
 
-    public class Item: INotifyPropertyChanged
+    public class Item : INotifyPropertyChanged
     {
         public string Name { get; set; }
         public double Price { get; set; }
@@ -168,5 +168,13 @@ public partial class ShoppingTotal : ContentPage
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+    }
+
+    private void OnTaxChanged(object sender, TextChangedEventArgs e)
+    {
+        if(txtTaxPercent.Text == null || txtTaxPercent.Text == "") {
+            return;
+        }
+        UpdateTotals();
     }
 }

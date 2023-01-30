@@ -193,21 +193,20 @@
 
                 <!-- 4 -->
                 <Button 
-                    Text="TextRPG" 
-                    HorizontalOptions="Center"
-                    Clicked="TextRPG"
-                    Margin="10"
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    IsVisible="False"
-                />
-                <Button 
                     Text="Dice" 
                     HorizontalOptions="Center"
                     Clicked="Dice"
                     Margin="10"
                     Grid.Row="4"
                     Grid.Column="0"
+                />
+                <Button 
+                    Text="Shopping List" 
+                    HorizontalOptions="Center"
+                    Clicked="ShoppingList"
+                    Margin="10"
+                    Grid.Row="4"
+                    Grid.Column="1"
                 />
 
             </Grid>

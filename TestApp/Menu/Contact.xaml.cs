@@ -25,7 +25,7 @@ public partial class Contact : ContentPage
             "I wanted to contact you about your App.",
                 To = { "dwernz@att.net" }
             };
-            Email.ComposeAsync(email);
+            await Email.ComposeAsync(email);
         }
         else if (DeviceInfo.Current.Platform == DevicePlatform.Android)
         {

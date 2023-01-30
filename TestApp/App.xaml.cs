@@ -32,5 +32,6 @@ public partial class App : Application
         Routing.RegisterRoute("PrivacyPage", typeof(PrivacyPage));
         Routing.RegisterRoute("Contact", typeof(Contact));
         Routing.RegisterRoute("Donate", typeof(Donate));
+        Routing.RegisterRoute("ShoppingList", typeof(ShoppingList));
     }
 }

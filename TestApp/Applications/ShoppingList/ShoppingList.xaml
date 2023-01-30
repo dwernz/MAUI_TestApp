@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.Applications.ShoppingList"
+             Title="ShoppingList">
+    <VerticalStackLayout>
+        <Label 
+            Text="Shopping List"
+            HorizontalOptions="Center"
+            Margin="20"
+            FontSize="30"/>
+
+        <Grid
+            HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label 
+                Grid.Row="0" Grid.Column="0"
+                Text="Name: " Margin="5" HorizontalTextAlignment="Center"
+                FontAttributes="Bold"
+                FontSize="20"/>
+            <Entry 
+                Grid.Row="0" Grid.Column="1"
+                x:Name="txtItemListName" MinimumWidthRequest="200"
+                Margin="5"/>
+
+            <Label 
+                Grid.Row="1" Grid.Column="0"
+                Text="Quantity:" Margin="5"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold"
+                FontSize="20"/>
+            <Entry 
+                Grid.Row="1" Grid.Column="1"
+                x:Name="txtItemListQty" MinimumWidthRequest="200" Margin="5"
+                Keyboard="Numeric" />
+        </Grid>
+
+        
+        <HorizontalStackLayout HorizontalOptions="Center">
+            
+        </HorizontalStackLayout>
+        
+        <Button 
+            Text="Add" 
+            HorizontalOptions="Center"
+            Clicked="AddItem"
+            Margin="5"/>
+
+        <Grid HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label FontAttributes="Bold" FontSize="24" Text="Name" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            <Label FontAttributes="Bold" FontSize="24" Text="Qty" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+        </Grid>
+        
+        <ListView
+            ItemsSource="{Binding shoppingItems}"
+            HorizontalOptions="Center"
+            x:Name="shoppingItemListBox"
+            HeightRequest="400">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    
+                    <ViewCell>
+
+                        <Grid HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="90" />
+                                <ColumnDefinition Width="90" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label FontSize="16" Text="{Binding Name}" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Margin="1"/>
+                            <Label FontSize="16" Text="{Binding Qty}" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Margin="1"/>
+                            <Button Text="Edit" Grid.Row="0" Grid.Column="2" Clicked="EditItem" CommandParameter="{Binding .}" Margin="1"/>
+                            <Button Text="Delete" Grid.Row="0" Grid.Column="3" Clicked="DeleteItem" CommandParameter="{Binding .}" Margin="1"/>
+
+                        </Grid>
+
+                    </ViewCell>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </VerticalStackLayout>
+</ContentPage>
