@@ -59,11 +59,11 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             
-                            <Label Grid.Column="0" Text="{Binding Name}" Margin="1" MaximumWidthRequest="100"/>
-                            <Label Grid.Column="1" Text="{Binding Price, StringFormat='{0:0.00}'}" Margin="1" MaximumWidthRequest="100"/>
-                            <Button Grid.Column="2" Text="Edit Name" Command="{Binding EditItem}" MaximumWidthRequest="150" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemName"/>
-                            <Button Grid.Column="3" Text="Edit Price" Command="{Binding EditItem}" MaximumWidthRequest="100" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemPrice"/>
-                            <Button Grid.Column="4" Text="Delete" Command="{Binding DeleteCommand}" MaximumWidthRequest="100" CommandParameter="{Binding}" Margin="1" Clicked="DeleteItem"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" Margin="1" MaximumWidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Price, StringFormat='{0:0.00}'}" Margin="1" MaximumWidthRequest="100"/>
+                            <Button Grid.Row="0" Grid.Column="2" Text="Edit Name" Command="{Binding EditItem}" MaximumWidthRequest="150" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemName"/>
+                            <Button Grid.Row="0" Grid.Column="3" Text="Edit Price" Command="{Binding EditItem}" MaximumWidthRequest="100" CommandParameter="{Binding .}" Margin="1" Clicked="EditItemPrice"/>
+                            <Button Grid.Row="0" Grid.Column="4" Text="Delete" Command="{Binding DeleteCommand}" MaximumWidthRequest="100" CommandParameter="{Binding}" Margin="1" Clicked="DeleteItem"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

@@ -1,4 +1,7 @@
-﻿namespace TestApp;
+﻿using TestApp.Applications;
+using TestApp.About;
+
+namespace TestApp;
 
 public partial class App : Application
 {
@@ -16,5 +19,19 @@ public partial class App : Application
         Routing.RegisterRoute("MathQuiz", typeof(MathQuiz));
         Routing.RegisterRoute("TicTacToe", typeof(TicTacToe));
 		Routing.RegisterRoute("ShoppingTotal", typeof(ShoppingTotal));
+		Routing.RegisterRoute("TextRPG", typeof(TextRPG));
+		Routing.RegisterRoute("Dice", typeof(Dice));
+        Routing.RegisterRoute("AboutApp", typeof(AboutApp));
+		Routing.RegisterRoute("AboutCounter", typeof(AboutCounter));
+        Routing.RegisterRoute("AboutFizzBuzz", typeof(AboutFizzBuzz));
+        Routing.RegisterRoute("AboutHours", typeof(AboutHours));
+        Routing.RegisterRoute("AboutMathQuiz", typeof(AboutMathQuiz));
+        Routing.RegisterRoute("AboutShoppingTotal", typeof(AboutShoppingTotal));
+        Routing.RegisterRoute("AboutTicTacToe", typeof(AboutTicTacToe));
+        Routing.RegisterRoute("AboutTipCalc", typeof(AboutTipCalc));
+        Routing.RegisterRoute("AboutDice", typeof(AboutDice));
+        Routing.RegisterRoute("PrivacyPage", typeof(PrivacyPage));
+        Routing.RegisterRoute("Contact", typeof(Contact));
+        Routing.RegisterRoute("Donate", typeof(Donate));
     }
 }

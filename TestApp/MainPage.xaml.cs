@@ -5,10 +5,11 @@ namespace TestApp;
 public partial class MainPage : ContentPage
 {
     
+
     public MainPage()
 	{
 		InitializeComponent();
-	}
+    }
 
 	private async void SalesCalculator(object sender, EventArgs e)
 	{
@@ -49,13 +50,40 @@ public partial class MainPage : ContentPage
 		await Shell.Current.GoToAsync("ShoppingTotal");
 	}
 
-	private async void GoToWebsite(object sender, EventArgs e)
+    private async void TextRPG(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("TextRPG");
+    }
+
+	private async void Dice(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("Dice");
+	}
+
+    private async void GoToWebsite(object sender, EventArgs e)
 	{
         var url = "https://dwernzcv.azurewebsites.net";
 		await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
     }
 
-	private void NationalDayMessageGenerator (object sender, EventArgs e)
+	private async void PrivacyPage(object sender, EventArgs e)
+	{
+        var url = "https://dwernzcv.azurewebsites.net/MauiTestAppPrivacy";
+        await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+    }
+
+	private async void DonationPage(object sender, EventArgs e)
+	{
+        var url = "https://dwernzcv.azurewebsites.net/Donation";
+        await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+    }
+
+    private async void AboutApp(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("AboutApp");
+    }
+
+    private void NationalDayMessageGenerator (object sender, EventArgs e)
 	{
 		DateTime today = DateTime.Today;
         NationalDay nationalDay = new NationalDay();

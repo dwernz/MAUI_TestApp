@@ -4,11 +4,72 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TestApp"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:About="clr-namespace:TestApp.About"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Donate"
+        ContentTemplate="{DataTemplate local:Donate}"
+        Route="Donate" />
+
+    <ShellContent
+        Title="Contact"
+        ContentTemplate="{DataTemplate local:Contact}"
+        Route="Contact" />
+
+    <ShellContent
+        Title="Privacy Page"
+        ContentTemplate="{DataTemplate local:PrivacyPage}"
+        Route="PrivacyPage" />
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="About">
+            <ShellContent
+                Title="App"
+                ContentTemplate="{DataTemplate About:AboutApp}"
+                Route="AboutApp" />
+            <ShellContent
+                Title="Counter"
+                ContentTemplate="{DataTemplate About:AboutCounter}"
+                Route="AboutCounter" />
+            <ShellContent
+                Title="Dice"
+                ContentTemplate="{DataTemplate About:AboutDice}"
+                Route="AboutDice" />
+            <ShellContent
+                Title="Fizz Buzz"
+                ContentTemplate="{DataTemplate About:AboutFizzBuzz}"
+                Route="AboutFizzBuzz" />
+            <ShellContent
+                Title="Hours Calculator"
+                ContentTemplate="{DataTemplate About:AboutHours}"
+                Route="AboutHours" />
+            <ShellContent
+                Title="Math Quiz"
+                ContentTemplate="{DataTemplate About:AboutMathQuiz}"
+                Route="AboutMathQuiz" />
+            <ShellContent
+                Title="Sales Calculator"
+                ContentTemplate="{DataTemplate About:AboutSalesCalc}"
+                Route="AboutSalesCalc" />
+            <ShellContent
+                Title="Shopping Total"
+                ContentTemplate="{DataTemplate About:AboutShoppingTotal}"
+                Route="AboutShoppingTotal" />
+            <ShellContent
+                Title="Tic Tac Toe"
+                ContentTemplate="{DataTemplate About:AboutTicTacToe}"
+                Route="AboutTicTacToe" />
+            <ShellContent
+                Title="Tip Calculator"
+                ContentTemplate="{DataTemplate About:AboutTipCalc}"
+                Route="AboutTipCalc" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>

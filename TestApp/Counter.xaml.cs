@@ -51,4 +51,9 @@ public partial class Counter : ContentPage
 
         LblCountApp.Text = $"Count: {count}";
     }
+
+    private async void AboutCounter(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("AboutCounter");
+    }
 }

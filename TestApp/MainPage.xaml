@@ -37,11 +37,7 @@
                 HorizontalTextAlignment="Center"
                 Loaded="NationalDayMessageGenerator"/>
 
-            <Button
-                Text="Visit my website"
-                HorizontalOptions="Center"
-                Clicked="GoToWebsite"
-            />
+            
 
             <!-- Different mini applications/features I have created. -->
             <!-- Completed -->
@@ -53,8 +49,12 @@
                 Fizz Buzz Generator
                 Math Quiz
                 TicTacToe
+                Shopping Total
+                Dice
+                
+            
+                Privacy Page, Donation, About, Website
                 National Day message on Home page
-            Shopping Total
             -->
             <!-- TODO -->
             <!-- Add Features
@@ -78,13 +78,21 @@
                     9) Reset button to reset times
                 More Complex Game
                     1) Similar to the C# tutorial TextRPG
-                Coin and Dice Toss
-                    1) Can select a coin, or (4, 6, 10, 12, 20, 100) sided die.
+                    2) Craps
+                    3) Blackjack
             -->
             <!-- Fix Features
-                
+                Shopping Total - Closing the Keyboard and the go back button are same location.
+                    Leading to some mistakes of going back and erasing the data.
+                    Create a method to save to a local file.
+                    When opened, get the saved items.
+                Shopping Total - When updating the Tax percent, it only reflects changes
+                    after add, edit, or delete.
+                    Needs to update when input is changed, with the exception of null and
+                    empty string values.
+                    null and empty string should be equal to zero.
             -->
-            
+
             <!-- 
                 After developing more applications, a 
                 single column was becoming too long, so
@@ -182,9 +190,26 @@
                     Grid.Row="3"
                     Grid.Column="1"
                 />
-                
+
                 <!-- 4 -->
-        
+                <Button 
+                    Text="TextRPG" 
+                    HorizontalOptions="Center"
+                    Clicked="TextRPG"
+                    Margin="10"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    IsVisible="False"
+                />
+                <Button 
+                    Text="Dice" 
+                    HorizontalOptions="Center"
+                    Clicked="Dice"
+                    Margin="10"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                />
+
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
