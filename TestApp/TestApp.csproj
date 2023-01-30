@@ -86,6 +86,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Applications\TextRPG\**" />
+	  <Compile Remove="Applications\TextRPG\**" />
+	  <EmbeddedResource Remove="Applications\TextRPG\**" />
+	  <MauiCss Remove="Applications\TextRPG\**" />
+	  <MauiXaml Remove="Applications\TextRPG\**" />
+	  <None Remove="Applications\TextRPG\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -145,28 +154,21 @@
 		<MauiXaml Update="Applications\ShoppingTotal.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Applications\TextRPG\TextRPG.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
 		<MauiXaml Update="Applications\TicTacToe.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Applications\TipCalculator.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Contact.xaml">
+		<MauiXaml Update="Applications\Contact.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Donate.xaml">
+		<MauiXaml Update="Menu\Donate.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="PrivacyPage.xaml">
+		<MauiXaml Update="Menu\PrivacyPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Menu\" />
 	</ItemGroup>
 
 </Project>

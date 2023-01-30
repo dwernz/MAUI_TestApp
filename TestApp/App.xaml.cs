@@ -19,7 +19,6 @@ public partial class App : Application
         Routing.RegisterRoute("MathQuiz", typeof(MathQuiz));
         Routing.RegisterRoute("TicTacToe", typeof(TicTacToe));
 		Routing.RegisterRoute("ShoppingTotal", typeof(ShoppingTotal));
-		Routing.RegisterRoute("TextRPG", typeof(TextRPG));
 		Routing.RegisterRoute("Dice", typeof(Dice));
         Routing.RegisterRoute("AboutApp", typeof(AboutApp));
 		Routing.RegisterRoute("AboutCounter", typeof(AboutCounter));
