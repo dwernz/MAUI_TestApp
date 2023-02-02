@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.Applications.WaterReminder"
+             Title="WaterReminder">
+    <VerticalStackLayout>
+        <Label 
+            Text="Water Reminder"
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="20"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Notifications" FontAttributes="Bold" FontSize="20" Margin="10"/>
+            <Switch x:Name="switchNotification" IsToggled="false" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Wake Up"  FontAttributes="Bold" FontSize="20" Margin="10"/>
+            <TimePicker x:Name="tpWakeUpTime" Time="8:00:00"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Bed Time"  FontAttributes="Bold" FontSize="20" Margin="10"/>
+            <TimePicker x:Name="tpBedTime" Time="22:00:00"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Amount of Water to Drink" FontAttributes="Bold" FontSize="20" Margin="10"/>
+            <Entry Placeholder="" />
+            <Label Text="Oz" FontAttributes="Bold" FontSize="20" Margin="10"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Picker Title="How often do you want to be reminded"
+                x:Name="pickFrequency"
+                     FontAttributes="Bold" FontSize="20" Margin="10" HorizontalTextAlignment="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>2 hours</x:String>
+                        <x:String>1 hour</x:String>
+                        <x:String>30 minutes</x:String>
+                        <x:String>20 minutes</x:String>
+                        <x:String>15 minutes</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
